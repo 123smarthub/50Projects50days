@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "poppins", sans-serif;
+    background-color: #333333;
+    z-index: -10;
+}
+
+.container {
+    width: inherit;
+    padding: 15% 8%;
+    font-size: 14px;
+    background-color: #fff;
+    transform-origin: top left;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+
+.container.active {
+    transform: rotate(-22.5deg);
+}
+
+.content {
+    width: inherit;
+}
+
+.content small {
+    font-style: italic;
+}
+
+.content p {
+    margin: 20px 0;
+}
+
+.content img {
+    width: inherit;
+    background-size: cover;
+    background-position: center;
+}
+
+.content h2 {
+    margin: 10px 0;;
+}
+
+/* Corner Box */
+
+.corner {
+    position: absolute;
+    width: 200px;;
+    height: 200px;
+    top: -100px;
+    left: -100px; 
+    z-index: 1;
+    transition: transform .7s ease-in-out;
+}
+
+.circle {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: rgb(225, 103, 103);    
+}
+
+.corner.active {
+    transform: rotate(-90deg);
+}
+
+.circle i {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 65%;
+}
+
+.circle i#bars {
+    right: 50px;
+}
+.circle i#times {
+    left: 45px;
+}
+
+.nav-menu {
+    position: fixed;;
+    bottom: 8%;
+    color: #fff;
+    left: -50%;
+    transition: 0.7s linear 0.2s;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-menu ul li {
+    margin: 30px 0;
+    text-transform: uppercase;
+    transition: margin .7s ease;
+}
+.nav-menu ul li:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(1.2);
+}
+
+
+.nav-menu ul li i{
+    margin: 0 15px 0 0;
+}
+
+.nav-menu.active nav ul li:nth-child(2) {
+    margin-left: 15px;
+}
+
+.nav-menu.active nav ul li:nth-child(3) {
+    margin-left: 30px;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
